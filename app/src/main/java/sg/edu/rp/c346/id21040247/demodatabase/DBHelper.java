@@ -28,7 +28,7 @@ public class DBHelper extends SQLiteOpenHelper {
             super(context, DATABASE_NAME, null, DATABASE_VER);
         }
 
-        //onCreate
+        //onCreate - create database table
         @Override
         public void onCreate(SQLiteDatabase db) {
             String createTableSql = "CREATE TABLE " + TABLE_TASK +  "("
@@ -44,7 +44,6 @@ public class DBHelper extends SQLiteOpenHelper {
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int
                 newVersion) {
-
             // Drop older table if existed
             db.execSQL("DROP TABLE IF EXISTS " + TABLE_TASK);
             // Create table(s) again
@@ -54,7 +53,6 @@ public class DBHelper extends SQLiteOpenHelper {
 
         //-Method- Insert Row
         public void insertTask(String description, String date){
-
             // Get an instance of the database for writing
             SQLiteDatabase db = this.getWritableDatabase();
             // We use ContentValues object to store the values for
