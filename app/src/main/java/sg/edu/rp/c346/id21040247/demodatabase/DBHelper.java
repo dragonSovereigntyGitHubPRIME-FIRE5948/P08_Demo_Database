@@ -23,10 +23,9 @@ public class DBHelper extends SQLiteOpenHelper {
         private static final String COLUMN_DESCRIPTION = "description";
         private static final String COLUMN_DATE = "date";
 
-
         public DBHelper(Context context) {
-            super(context, DATABASE_NAME, null, DATABASE_VER);
-        }
+        super(context, DATABASE_NAME, null, DATABASE_VER);
+    }
 
         //onCreate - create database table
         @Override
@@ -100,7 +99,6 @@ public class DBHelper extends SQLiteOpenHelper {
 
             return tasks;
         }
-
 
     }
 

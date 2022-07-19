@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
                 // Insert a task using .insertTask method in DBHelper Class
                 db.insertTask("Submit RJ", "25 Apr 2021");
-
             }
         });
 
